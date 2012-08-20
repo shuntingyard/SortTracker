@@ -1,0 +1,88 @@
+/* Reset */
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, ol, ul, li, form, fieldset, legend, label,
+table, header, footer, nav, section {
+    margin: 0; 
+    padding: 0;
+    border: 0;
+}
+/* End Reset */
+
+/* Global */
+body {
+    font: 100%/1.5 'Gill Sans', 'Droid Sans', 'Calibri', 'Lucida Grande',
+          'Trebuchet MS', 'Helvetica Neue', 'Arial', sans-serif; 
+    /*text-align: center;*/
+}
+a {
+    text-decoration: none;
+    color: #7f7f7f;
+}
+a:hover, a:focus {
+    color: #000;
+}
+header {
+    height: 2.2em;
+    background: lightblue;
+    position: relative;
+}
+footer {
+    height: 5.3em;
+    background: lightblue;
+    position: relative;
+}
+/* End Global */
+
+/* Position and Size by Id */
+#header-controls {
+    position: absolute;
+    bottom: 0.2em;
+    left: 2%;
+}
+#header-anchors {
+    position: absolute;
+    bottom: 0.2em;
+    right: 2%;
+}
+#animation {
+    position: relative;
+    min-height: 294px;
+}
+#canvas {
+    z-index: 1;
+    position: absolute;
+    bottom: 5px;
+    left: 2%;
+}
+#status {
+    z-index: 0;
+    width: 240px;
+    height: 148px;
+    background: antiquewhite;
+    position: absolute;
+    top: 5px;
+    right: 2%;
+    text-align: left;
+}
+#status-table {
+    position: absolute;
+    left: 1em;
+    /* TODO Vertical table alignment. */
+}
+#populate-controls {
+    position: absolute;
+    top: 0.3em;
+    left: 2%;
+}
+#random-selector {
+    width: 8em;
+}
+#sort-controls {
+    position: absolute;
+    bottom: 0.5em;
+    left: 2%;
+}
+#algorithm-selector {
+    width: 8em;
+}
+/* End Position and Size by Id */

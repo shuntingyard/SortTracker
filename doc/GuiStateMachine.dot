@@ -1,0 +1,25 @@
+digraph finite_state_machine {
+    rankdir=LR;
+    size="8.4"
+    node [shape = doublecircle]; stop;
+    node [shape = circle];
+    start -> initial [ style = "dotted" ];
+    initial [ color = "blue", fontcolor = "blue" ];
+    initial -> stop [ style = "dotted" ];
+    initial -> initial [ label = "pick random model", color = "blue", fontcolor = "blue" ];
+    canceled [ color = "red", fontcolor = "red" ];
+    canceled -> initial [ label = "reset", color = "blue", fontcolor = "blue" ];
+    canceled -> stop [ style = "dotted" ];
+    sorted [ color = "green", fontcolor = "green" ];
+    sorted -> initial [ label = "reset", color = "blue", fontcolor = "blue" ];
+    sorted -> stop [ style = "dotted" ];
+    initial -> populated [ label = "populate", color = "brown", fontcolor = "brown" ];
+    populated [ color = "brown", fontcolor = "brown" ];
+    populated -> stop [ style = "dotted" ];
+    populated -> populated [ label = "pick sort algorithm", color = "brown", fontcolor = "brown" ];
+    populated -> initial [ label = "reset", color = "blue", fontcolor = "blue" ];
+    populated -> sorting [ label = "sort", color = "orange", fontcolor = "orange" ];
+    sorting [color = "orange", fontcolor= "orange" ];
+    sorting -> canceled [ label = "cancel", color = "red", fontcolor = "red" ];
+    sorting -> sorted [ color = "green", fontcolor = "green" ];
+}

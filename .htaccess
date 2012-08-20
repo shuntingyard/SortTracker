@@ -1,0 +1,5 @@
+# Must rewrite for all widespread user agents with limited capabilities.
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} .*MSIE[765432]\..*
+RewriteCond %{HTTP_USER_AGENT} ^Mozilla.*\ Firefox/1\..*
+RewriteRule .* X.html [L]

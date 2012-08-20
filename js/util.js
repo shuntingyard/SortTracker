@@ -1,6 +1,6 @@
 /*
  * A object to manage UI state transitions
- */
+ */util
 function State() {
     this.sval;
     this.rsel = document.getElementById('random-selector');
@@ -173,6 +173,7 @@ random.getNearReverse = function(a, uplim) {
 }
 
 random.getRandomlyOrdered = function(a, uplim) {
+    // TODO Implement!
     return a;
 }
 

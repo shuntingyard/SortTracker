@@ -1,6 +1,6 @@
 /*
  * A object to manage UI state transitions
- */util
+ */
 function State() {
     this.sval;
     this.rsel = document.getElementById('random-selector');
@@ -184,7 +184,7 @@ cmd.invokesort = function(sortfunc, sortarray) {
     // handlers
     function exch(a, i, j) {
         cmdq.push(cmd.exchange(i, j, a[i], a[j]));
-        var t=a[i];a[i]=a[j];a[j]=t;
+        var t=a[i]; a[i]=a[j]; a[j]=t;
     }
     
     function compexch(a, i, j) {

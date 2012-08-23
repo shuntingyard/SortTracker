@@ -1,5 +1,6 @@
-# Must rewrite for all widespread user agents with limited capabilities.
+# Rewrite for widespread user agents without <canvas> capabilities.
 RewriteEngine On
-RewriteCond %{HTTP_USER_AGENT} .*MSIE[765432]\..*
-RewriteCond %{HTTP_USER_AGENT} ^Mozilla.*\ Firefox/1\..*
+RewriteCond %{HTTP_USER_AGENT} .*\ MSIE\ [8765432]\..*  [OR]
+RewriteCond %{HTTP_USER_AGENT} .*\ Firefox/3\.[510].*   [OR]
+RewriteCond %{HTTP_USER_AGENT} .*\ Firefox/[210]\..*
 RewriteRule .* X.html [L]

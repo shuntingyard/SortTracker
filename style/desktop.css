@@ -1,50 +1,61 @@
 /* Global */
-header {
-    height: 3.3em;
+header{
+height:3.3em;
 }
-footer {
-    height: 3.3em;
+footer{
+height:3.3em;
 }
 /* End Global */
 
-/* Position and Size by Id */
-#header-controls {
-    left: auto;
-    right: 61.8%;
+/* Attributes by Id */
+#controls-group0{
+padding-top:1.4em;
+padding-left:0;
+width:38.2%;
+text-align:right;
 }
-#header-anchors {
-    right: auto;
-    left: 39%;
+#nav-group0{
+padding-top:1.4em;
+padding-right:0;
+width:61.1%;
 }
-#animation {
-    min-height: 388px;
+#status{
+width:414px;
+height:256px;
+box-shadow:10px 10px 5px #888888;
+top:8px;
+right:auto;
+left:39%;
+}
+#status-table{
+left:5.5em;
+top:3.45em;
+/* TODO Remove 'top' once vertical alignment is resolved. */
 }
 #canvas {
-    box-shadow: 10px 10px 5px #888888;
-    bottom: 15px;
-    left: auto;
-    right: 61.8%;
+box-shadow:10px 10px 5px #888888;
+right:61.8%;
+bottom:15px;
+left:auto;
 }
-#status {
-    width: 388px;
-    height: 240px;
-    box-shadow: 10px 10px 5px #888888;
-    top: 8px;
-    right: auto;
-    left: 39%;
+#controls-group1{
+padding-top:0.4em;
+padding-left:0;
+width:38.2%;
+text-align:right;
+float:left;
 }
-#status-table {
-    left: 5.5em;
-    top: 3em;
-    /* TODO Remove 'top' once vertical alignment is resolved. */
+#controls-group2{
+padding:0;
+padding-top:0.4em;
+padding-right:0;
+width:61.1%;
+float:right;
 }
-#populate-controls {
-    left: auto;
-    right: 61.8%;
+#help-text{
+padding:0;
+padding:8px 0;
+width:61.1%;
+float:right;
 }
-#sort-controls {
-    top: 0.3em;
-    right: auto;
-    left: 39%;
-}
-/* End Position and Size by Id */
+/* End Attributes by Id */

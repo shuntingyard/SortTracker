@@ -1,97 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SortTracker</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="HandheldFriendly" content="true" />
-    <link rel="stylesheet" type="text/css" href="style/mobile.css"
-          media="screen, handheld" />
-    <link rel="stylesheet" type="text/css" href="style/desktop.css"
-          media="screen  and (min-width: 40.5em)" />
+<title>SortTracker</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="HandheldFriendly" content="true" />
+<link rel="stylesheet" type="text/css" href="style/mobile.css" media="screen, handheld" />
+<link rel="stylesheet" type="text/css" href="style/desktop.css" media="screen  and (min-width: 40.5em)" />
 </head>
 <body onload="window.onresize()">
-    <header id="H">
-        <div id="header-controls">
-            <label>FPS</label>
-            <select id="fps-selector" onchange="changeFrameRate()">
-                <option value="20">50</option>
-                <option value="40">25</option>
-                <option selected value="100">10</option>
-                <option value="200">5</option>
-                <option value="500">2</option>
-                <option value="1000">1</option>
-            </select>
-        </div>
-        <nav id="header-anchors">
-            <a id="help-anchor" href="help.html">Help</a>
-        </nav>
-    </header>
-    <div id="animation">
-        <div id="status" onclick="statusToTop()">
-            <table id="status-table">
-                <tr>
-                    <td>Operations:</td>
-                    <td id="sort-handlers">na</td>
-                </tr>
-                <tr>
-                    <td>Ops pending:</td>
-                    <td id="queued-ops">0</td>
-                </tr>
-                <tr>
-                    <td>Sort elapsed:</td>
-                    <td id="sort-elapsed">0s</td>
-                </tr>
-                <tr>
-                    <td>Animation:</td>
-                    <td id="anim-elapsed">00:00</td>
-                </tr>
-                <tr>
-                    <td>FPS achieved:</td>
-                    <td id="fps-achieved">na</td>
-                </tr>
-            </table>
-        </div>
-        <canvas id="canvas"
-                width="240"
-                height="240"
-                onclick="canvasToTop()">
-        </canvas>
-    </div>
-    <footer id="F">
-        <div id="populate-controls">
-            <select id="random-selector">
-                <option value="getRandom">Random values</option>
-                <option value="getGaussian">Gaussian</option>
-                <option value="getNearOrdered">Near ordered</option>
-                <option value="getNearReverse">Near reverse</option>
-                <!--option value="getRandomlyOrdered">Randomly ordered</option-->
-            </select>
-            <button id="populate-btn" type="button" onclick="populate()">
-                    Populate</button>
-            <button id="reset-btn" type="button" onclick="reset()">
-                    Reset</button>
-        </div>
-        <div id="sort-controls">
-            <select id="algorithm-selector">
-                <option value="selectionSort">Selection sort</option>
-                <option value="insertionSort">Insertion sort</option>
-                <option value="insertionSortBetter">
-                    Insertion sort (better)
-                </option>
-                <option value="bubbleSort">Bubble sort</option>
-                <option value="shellSort">Shellsort</option>
-                <option value="quickSort">Quicksort</option>
-            </select>
-            <button id="sort-btn" type="button" onclick="sort()">
-                    Sort</button>
-            <button id="cancel-btn" type="button" onclick="cancel()">
-                    Cancel</button>
-        </div>
-    </footer>
-    <script type="text/javascript" src="dependencies/init.js"></script>
-    <script type="text/javascript" src="js/util.js"></script>
-    <script type="text/javascript" src="js/st.js"></script>
-    <script type="text/javascript" src="js/algorithm.js"></script>
+<header id="hdr">
+<div id="controls-group0">
+<label>FPS</label>
+<select id="fps-selector" onchange="changeFrameRate()">
+<option value="20">50</option>
+<option value="40">25</option>
+<option selected value="100">10</option>
+<option value="200">5</option>
+<option value="500">2</option>
+<option value="1000">1</option>
+</select>
+</div>
+<nav id="nav-group0">
+<a href="help.html">Help</a>
+</nav>
+</header>
+<div id="animation">
+<div id="status" onclick="statusToTop()">
+<table id="status-table">
+<tr>
+<td>Operations:</td>
+<td id="sort-handlers">na</td>
+</tr>
+<tr>
+<td>Ops pending:</td>
+<td id="queued-ops">0</td>
+</tr>
+<tr>
+<td>Sort elapsed:</td>
+<td id="sort-elapsed">0s</td>
+</tr>
+<tr>
+<td>Animation:</td>
+<td id="anim-elapsed">00:00</td>
+</tr>
+<tr>
+<td>FPS achieved:</td>
+<td id="fps-achieved">na</td>
+</tr>
+</table>
+</div>
+<canvas id="canvas" onclick="canvasToTop()" width="256" height="256">
+</canvas>
+</div>
+<footer id="ftr" style="clear:both;">
+<div id="controls-group1">
+<select id="random-selector">
+<option value="getRandom">Random values</option>
+<option value="getGaussian">Gaussian</option>
+<option value="getNearOrdered">Near ordered</option>
+<option value="getNearReverse">Near reverse</option>
+<!--option value="getRandomlyOrdered">Randomly ordered</option-->
+</select>
+<button id="populate-btn" type="button" onclick="populate()">Populate</button>
+<button id="reset-btn" type="button" onclick="reset()">Reset</button>
+</div>
+<div id="controls-group2">
+<select id="algorithm-selector">
+<option value="selectionSort">Selection sort</option>
+<option value="insertionSort">Insertion sort</option>
+<option value="insertionSortBetter">Insertion sort (better)</option>
+<option value="bubbleSort">Bubble sort</option>
+<option value="shellSort">Shellsort</option>
+<option value="quickSort">Quicksort</option>
+</select>
+<button id="sort-btn" type="button" onclick="sort()">Sort</button>
+<button id="cancel-btn" type="button" onclick="cancel()">Cancel</button>
+</div>
+</footer>
+<script type="text/javascript" src="dependencies/init.js"></script>
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/st.js"></script>
+<script type="text/javascript" src="js/algorithm.js"></script>
 </body>
 </html>

@@ -1,88 +1,89 @@
 /* Reset */
 html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, 
 blockquote, ol, ul, li, form, fieldset, legend, label,
-table, header, footer, nav, section {
-    margin: 0; 
-    padding: 0;
-    border: 0;
+table, header, footer, nav, section{
+margin:0; 
+padding:0;
+border:0;
 }
 /* End Reset */
 
 /* Global */
-body {
-    font: 100%/1.5 'Gill Sans', 'Droid Sans', 'Calibri', 'Lucida Grande',
-          'Trebuchet MS', 'Helvetica Neue', 'Arial', sans-serif; 
-    /*text-align: center;*/
+body{
+font:100%/1.5 sans-serif;
 }
 a {
-    text-decoration: none;
-    color: #7f7f7f;
+text-decoration: none;
+color:#7f7f7f;
 }
-a:hover, a:focus {
-    color: #000;
+a:hover,a:focus{
+color:#000;
 }
-header {
-    height: 2.2em;
-    background: lightblue;
-    position: relative;
+header{
+height:2.2em;
+background:lightblue;
 }
-footer {
-    height: 5.3em;
-    background: lightblue;
-    position: relative;
+footer{
+height:5.3em;
+background:lightblue;
 }
 /* End Global */
 
-/* Position and Size by Id */
-#header-controls {
-    position: absolute;
-    bottom: 0.2em;
-    left: 2%;
+/* Attributes by Id */
+#controls-group0{
+float:left;
+margin:0;
+padding-top:0.2em;
+padding-left:2%;
 }
-#header-anchors {
-    position: absolute;
-    bottom: 0.2em;
-    right: 2%;
+#nav-group0{
+float:right;
+padding-top:0.2em;
+padding-right:2%;
 }
-#animation {
-    position: relative;
-    min-height: 294px;
+#animation{
+clear:both;
+position:relative;
+min-height:288px;
 }
-#canvas {
-    z-index: 1;
-    position: absolute;
-    bottom: 5px;
-    left: 2%;
+#status{
+background:antiquewhite;
+width:256px;
+height:144px;
+position:absolute;
+top:5px;
+right:2%;
 }
-#status {
-    z-index: 0;
-    width: 240px;
-    height: 148px;
-    background: antiquewhite;
-    position: absolute;
-    top: 5px;
-    right: 2%;
-    text-align: left;
+#status-table{
+position:absolute;
+left:1em;
+/* TODO Vertical table alignment. */
 }
-#status-table {
-    position: absolute;
-    left: 1em;
-    /* TODO Vertical table alignment. */
+#canvas{
+background:white; /*Prevent artefacts when overlapping with #status.*/
+position:absolute;
+bottom:5px;
+left:2%;
 }
-#populate-controls {
-    position: absolute;
-    top: 0.3em;
-    left: 2%;
+#controls-group1{
+margin:0;
+padding-top:0.3em;
+padding-left:2%;
 }
-#random-selector {
-    width: 8em;
+#random-selector{
+width:8em;
 }
-#sort-controls {
-    position: absolute;
-    bottom: 0.5em;
-    left: 2%;
+#controls-group2{
+padding-bottom:0.5em;
+padding-left:2%;
 }
-#algorithm-selector {
-    width: 8em;
+#algorithm-selector{
+width: 8em;
 }
-/* End Position and Size by Id */
+#help-container{
+clear:both;
+}
+#help-text{
+padding:1px 3.7% 1px 3.7%;
+}
+/* End Attributes by Id */

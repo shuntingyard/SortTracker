@@ -9,7 +9,7 @@ var state = new State();
 var fps;
 
 // constants and variables for drawing
-var W = 120; var H = 120; var S = 2;
+var W = 128; var H = 128; var S = 2;
 var ctx = document.getElementById('canvas').getContext('2d');
 reset();
 
@@ -23,8 +23,8 @@ var cmdq = [];
 window.onresize = function() {
     document.getElementById('animation').style.height =
             window.innerHeight
-            -document.getElementById('H').offsetHeight
-            -document.getElementById('F').offsetHeight + 'px';
+            -document.getElementById('hdr').offsetHeight
+            -document.getElementById('ftr').offsetHeight + 'px';
 }
 
 // respond to UI input from here on

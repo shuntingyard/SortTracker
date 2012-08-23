@@ -1,4 +1,4 @@
-codefixture.html
+codefixture*.html
 *~
 /compressed/
 /nbproject/

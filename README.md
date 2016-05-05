@@ -21,4 +21,3 @@ For sorting: "Algorithms in Java, Parts 1-4" by Robert Sedgewick
 For a mobile-first approach: http://www.html5rocks.com/en/mobile/responsivedesign/
 ## Trivia
 The project was code-named "мравките" (Bulgarian for ants) by a pal of mine.
-See why <a href="http://webapp.topmid.com/st/">here</a>.
